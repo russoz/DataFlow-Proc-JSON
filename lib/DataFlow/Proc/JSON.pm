@@ -11,7 +11,7 @@ use Moose;
 extends 'DataFlow::Proc::Converter';
 
 use namespace::autoclean;
-use JSON::Any;
+use JSON;
 
 sub _policy {
     return shift->direction eq 'CONVERT_TO' ? 'ArrayRef' : 'Scalar';
